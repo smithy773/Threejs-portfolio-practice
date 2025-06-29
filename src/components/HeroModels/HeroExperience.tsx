@@ -1,12 +1,15 @@
 import { OrbitControls } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import { useMediaQuery } from "react-responsive";
+import Room from "./Room";
+import HeroLights from "./HeroLights";
 
 export default function HeroExperience() {
-  const isTablet = false;
+  const isTablet = useMediaQuery({ query: "(max-width: 1024px)" });
+  const isMobile = useMediaQuery({ query: "(max-width: 768px)" });
   return (
     <Canvas camera={{ position: [0, 0, 15], fov: 45 }}>
-      <ambientLight intensity={0.7} color="1a1a40" />
-
+      <HeroLights />
       <OrbitControls
         enablePan={false}
         // dummy variable right now. enableZoom should be enabled on desktop and disabled on mobile
@@ -18,10 +21,13 @@ export default function HeroExperience() {
         minPolarAngle={Math.PI / 5}
         maxPolarAngle={Math.PI / 2}
       />
-      <mesh>
-        <boxGeometry args={[1, 1, 1]} />
-        <meshStandardMaterial color="teal" />
-      </mesh>
+      <group
+        scale={isMobile ? 0.7 : 1}
+        position={[0, -3, 0]}
+        rotation={[0, -Math.PI / 4, 0]}
+      >
+        <Room />
+      </group>
     </Canvas>
   );
 }
