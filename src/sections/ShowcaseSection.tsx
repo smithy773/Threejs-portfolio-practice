@@ -1,18 +1,55 @@
 import { useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ShowcaseSection() {
   const sectionRef = useRef(null);
-  const rydeRef = useRef(null);
-  const libraryRef = useRef(null);
-  const ycDirectoryRef = useRef(null);
+  const project1Ref = useRef(null);
+  const project2Ref = useRef(null);
+  const project3Ref = useRef(null);
 
-  const cards = [rydeRef.current, libraryRef.current, ycDirectoryRef.current];
+  useGSAP(() => {
+    const cards = [
+      project1Ref.current,
+      project2Ref.current,
+      project3Ref.current,
+    ];
+
+    cards.forEach((card, idx) => {
+      gsap.fromTo(
+        card,
+        {
+          y: 50,
+          opacity: 0,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1,
+          delay: 0.3 * (idx + 1),
+          scrollTrigger: {
+            trigger: card,
+            start: "top bottom-=100",
+          },
+        }
+      );
+    });
+
+    gsap.fromTo(
+      sectionRef.current,
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5 }
+    );
+  }, []);
 
   return (
     <div id="work" ref={sectionRef} className="app-showcase">
       <div className="w-full">
         <div className="showcaselayout">
-          <div ref={rydeRef} className="first-project-wrapper">
+          <div ref={project1Ref} className="first-project-wrapper">
             <div className="image-wrapper">
               {/* PUT IMAGE OF PORTFOLIO */}
               {/* <img src="" alt="Previous Portfolio website" /> */}
@@ -29,7 +66,7 @@ export default function ShowcaseSection() {
           </div>
 
           <div className="project-list-wrapper overflow-hidden">
-            <div className="project" ref={libraryRef}>
+            <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#FFEFDB]">
                 {/* PUT IMAGE OF HANGMAN */}
                 {/* <img src="" alt="Hangman Game" /> */}
@@ -37,7 +74,7 @@ export default function ShowcaseSection() {
               <h2>Hangman Game</h2>
             </div>
 
-            <div className="project" ref={ycDirectoryRef}>
+            <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#FFE7EB]">
                 {/* PUT IMAGE OF VIA-Outdoors */}
                 {/* <img src="" alt="VIA-Outdoors - Forum" /> */}
