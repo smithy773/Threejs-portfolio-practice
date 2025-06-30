@@ -149,50 +149,44 @@ const techStackIcons: {
 ];
 
 const expCards: {
-  review: string;
   imgPath: string;
   logoPath: string;
   title: string;
   date: string;
-  responsibilities: string[];
+  addInfo: string[];
 }[] = [
   {
-    review:
-      "Adrian brought creativity and technical expertise to the team, significantly improving our frontend performance. His work has been invaluable in delivering faster experiences.",
-    imgPath: "/images/exp1.png",
-    logoPath: "/images/logo1.png",
-    title: "Frontend Developer",
-    date: "January 2023 - Present",
-    responsibilities: [
-      "Developed and maintained user-facing features for the Hostinger website.",
-      "Collaborated closely with UI/UX designers to ensure seamless user experiences.",
-      "Optimized web applications for maximum speed and scalability.",
+    imgPath: "", // "/images/exp1.png"
+    logoPath: "", // "/images/logo1.png"
+    title: "Working on projects, searching for a job opportunity",
+    date: "April 2025 - Present",
+    addInfo: [
+      "After graduating from Telerik Academy's Alpha JavaScript course I received my Ministry of Education certificate for Application Programming with JavaScript.",
+      "Started working on all sorts of web projects, learned how to properly host websites using Firebase Hosting.",
+      "Focused on learning and gathering experience by coding my own projects and reviewing other programmers' code.",
     ],
   },
   {
-    review:
-      "Adrian’s contributions to Docker's web applications have been outstanding. He approaches challenges with a problem-solving mindset.",
-    imgPath: "/images/exp2.png",
-    logoPath: "/images/logo2.png",
-    title: "Full Stack Developer",
-    date: "June 2020 - December 2023",
-    responsibilities: [
-      "Led the development of Docker's web applications, focusing on scalability.",
-      "Worked with backend engineers to integrate APIs seamlessly with the frontend.",
-      "Contributed to open-source projects that were used with the Docker ecosystem.",
+    imgPath: "", // "/images/exp2.png"
+    logoPath: "", // "/images/logo2.png"
+    title: "Student at Telerik Academy's Alpha JavaScript course",
+    date: "October 2024 - April 2025",
+    addInfo: [
+      "Studied JavaScript, React, HTML, CSS, OOP principles, different programming paradigms, AJAX, DSA, Recursion and more.",
+      "Practiced JavaScript's core - from learning the difference between let, const and var to using array methods and working with objects and classes.",
+      "Graduated after working on 3 Team Projects - one that uses GIPHY API to display/search/favorite GIF, a forum for sharing outdoor adventures (VIA-Outdoors) and one that acts as a real-time messenger web app that can be used similarly to Teams (VIALogue)",
     ],
   },
   {
-    review:
-      "Adrian’s work on Appwrite’s mobile app brought a high level of quality and efficiency. He delivered solutions that enhanced our mobile experience & meet our product goals.",
-    imgPath: "/images/exp3.png",
-    logoPath: "/images/logo3.png",
-    title: "React Native Developer",
-    date: "March 2019 - May 2020",
-    responsibilities: [
-      "Built cross-platform mobile apps using React Native, integrating with Appwrite's backend services.",
-      "Improved app performance and user experience through code optimization and testing.",
-      "Coordinated with the product team to implement features based on feedback.",
+    imgPath: "", ///images/exp3.png
+    logoPath: "", ///images/logo3.png
+    title:
+      "Working at TELUS International, learning programming in my free time",
+    date: "August 2023 - July 2024",
+    addInfo: [
+      "Used English to assist foreign customers with their issues, achieving 95%+ satisfaction rate while simultaneously helping coworkers.",
+      "In my free time, I took up learning HTML, CSS and JavaScript to prepare for Telerik Academy's Alpha JavaScript course.",
+      "Finished some basic FrontendMentor projects available on my GitHub Repositories page to practice basic HTML, CSS and JavaScript - dynamic styling, event handling, etc.",
     ],
   },
 ];
