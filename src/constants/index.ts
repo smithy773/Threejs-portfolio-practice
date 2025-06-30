@@ -29,10 +29,8 @@ const words: { text: string; imgPath: string }[] = [
 ];
 
 const counterItems: { value: number; suffix: string; label: string }[] = [
-  { value: 15, suffix: "+", label: "Years of Experience" },
-  { value: 200, suffix: "+", label: "Satisfied Clients" },
-  { value: 108, suffix: "+", label: "Completed Projects" },
-  { value: 90, suffix: "%", label: "Client Retention Rate" },
+  { value: 1, suffix: "+", label: "Years of Experience" },
+  { value: 6, suffix: "+", label: "Completed Projects" },
 ];
 
 const logoIconsList: { imgPath: string }[] = [
