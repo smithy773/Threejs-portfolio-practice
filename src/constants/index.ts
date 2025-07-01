@@ -7,14 +7,6 @@ const navLinks: { name: string; link: string }[] = [
     name: "Experience",
     link: "#experience",
   },
-  {
-    name: "Skills",
-    link: "#skills",
-  },
-  {
-    name: "Testimonials",
-    link: "#testimonials",
-  },
 ];
 
 const words: { text: string; imgPath: string }[] = [

@@ -56,6 +56,7 @@ export default function Contact() {
                 //   @ts-ignore
                 onSubmit={handleSubmit}
                 className="w-full flex flex-col gap-7"
+                ref={formRef}
               >
                 <div>
                   <label htmlFor="name">Name</label>
