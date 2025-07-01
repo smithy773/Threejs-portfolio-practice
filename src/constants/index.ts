@@ -101,22 +101,16 @@ const expLogos: { name: string; imgPath: string }[] = [
   },
 ];
 
-const socialImgs: { name: string; imgPath: string }[] = [
+const socialImgs: { name: string; imgPath: string; url: string }[] = [
   {
-    name: "insta",
-    imgPath: "/images/insta.png",
-  },
-  {
-    name: "fb",
-    imgPath: "/images/fb.png",
-  },
-  {
-    name: "x",
-    imgPath: "/images/x.png",
+    name: "GitHub",
+    imgPath: "", // "/images/x.png"
+    url: "https://github.com/smithy773",
   },
   {
     name: "linkedin",
     imgPath: "/images/linkedin.png",
+    url: "https://www.linkedin.com/in/viktork7/",
   },
 ];
 
