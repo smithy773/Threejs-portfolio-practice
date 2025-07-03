@@ -51,9 +51,7 @@ export default function Experience() {
             {expCards.map((card) => (
               <div key={card.title} className='exp-card-wrapper'>
                 <div className='xl:w-2/6'>
-                  <div>
-                    <img src={card.imgPath} alt={card.title} />
-                  </div>
+                  <div>{/* <img src={card.imgPath} alt={card.title} /> */}</div>
                 </div>
                 <div className='xl:w-4/6 '>
                   <div className='flex items-start'>
